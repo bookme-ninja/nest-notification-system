@@ -7,6 +7,12 @@ export class User {
     name: string;
 
     @Prop({ required: true, unique: true })
+    username: string;
+
+    @Prop({ required: true, unique: true })
+    email: string;
+
+    @Prop({ required: true, unique: true })
     fcmToken: string;
 
     @Prop([{ type: MongooseSchema.Types.ObjectId, ref: 'NotificationTopic' }])

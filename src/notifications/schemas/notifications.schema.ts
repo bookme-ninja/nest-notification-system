@@ -24,6 +24,10 @@ export class Notification {
 
     @Prop()
     actionUrl?: string;
+
+    @Prop({ default: false })
+    sent: boolean;
+
 }
 
 export type NotificationDocument = HydratedDocument<Notification>;
